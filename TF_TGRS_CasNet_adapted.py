@@ -20,7 +20,7 @@ activation = 'relu'
 def convBlock(filters, kernel, kernel_initializer, activation, name=None):
     
     if name is None:
-        name = "convBlock" + str(backend.get_uid("convBlock"))
+        name = "convBlock" + str(tf.keras.backend.get_uid("convBlock"))
     
     def layer(input):
         c1 = tf.keras.layers.Conv2D(filters=filters, kernel_size=kernel, padding='same',
@@ -34,7 +34,7 @@ def convBlock(filters, kernel, kernel_initializer, activation, name=None):
 def dconvBlock(filters, kernel, kernel_initializer, activation, name=None):
     
     if name is None:
-        name = "dconvBlock" + str(backend.get_uid("dconvBlock"))
+        name = "dconvBlock" + str(tf.keras.backend.get_uid("dconvBlock"))
     
     def layer(input):
         d1 = tf.keras.layers.Conv2DTranspose(filters=filters, kernel_size=kernel, padding='same',
