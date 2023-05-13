@@ -4,9 +4,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 os.environ["SM_FRAMEWORK"] = "tf.keras"
 
 import tensorflow as tf
-from tensorflow import keras
-
-tf.__version__
+print('tf_version:', tf.__version__)
 
 # hyperparameters
 
@@ -99,7 +97,7 @@ def model_CASNET(activation, kernel_initializer, kernel_size):
     return model
 
 model = model_CASNET(activation=activation, kernel_initializer=kernel_initializer, kernel_size=3)
-model_CASNET.summary()
+print(model_CASNET.summary())
 
 # plot
 tf.keras.utils.plot_model(model, to_file='casnet_model.png', show_shapes=True, expand_nested=True, show_layer_activations=True)
