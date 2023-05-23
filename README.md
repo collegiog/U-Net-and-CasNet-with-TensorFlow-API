@@ -5,4 +5,4 @@ The [CasNet](https://ieeexplore.ieee.org/document/7873262) architecture is a cas
 
 ![](images/casnet_img.png)
 
-The model has an input (RGB images) and two outputs (road and centerline). The model was built to use with data loading pipeline of TensorFlow API.
+The model has an input (RGB images) and two outputs (road and centerline); it was built to use with data loading pipeline of TensorFlow API.
